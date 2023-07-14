@@ -26,8 +26,8 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/ppFKahL.png)
+![](https://i.imgur.com/jwUfzGi.png)
 > 使用現有的帳號登入
 
-![](https://i.imgur.com/2At6hAS.png)
+![](https://i.imgur.com/H7fMqTI.png)
 > 判斷一個使用者是否可以執行特定行為

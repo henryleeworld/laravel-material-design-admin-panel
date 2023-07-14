@@ -6,11 +6,10 @@
             {{ trans('panel.site_title') }}
         </a>
     </div>
-
     <!-- Sidebar Menu -->
     <div class="sidebar-wrapper">
         <ul class="nav" data-widget="treeview" role="menu" data-accordion="false">
-            <li class="nav-item">
+            <li class="nav-item {{ request()->is('admin') || request()->is('admin') ? 'active' : '' }}">
                 <a href="{{ route("admin.home") }}" class="nav-link">
                     <p>
                         <i class="fas fa-fw fa-tachometer-alt">
@@ -34,8 +33,8 @@
                     <div class="collapse show" id="user_management">
                         <ul class="nav">
                             @can('permission_access')
-                                <li class="nav-item">
-                                    <a href="{{ route("admin.permissions.index") }}" class="nav-link {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}">
+                                <li class="nav-item {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}">
+                                    <a href="{{ route("admin.permissions.index") }}" class="nav-link">
                                         <i class="fa-fw fas fa-unlock-alt">
 
                                         </i>
@@ -44,8 +43,8 @@
                                 </li>
                             @endcan
                             @can('role_access')
-                                <li class="nav-item">
-                                    <a href="{{ route("admin.roles.index") }}" class="nav-link {{ request()->is('admin/roles') || request()->is('admin/roles/*') ? 'active' : '' }}">
+                                <li class="nav-item {{ request()->is('admin/roles') || request()->is('admin/roles/*') ? 'active' : '' }}">
+                                    <a href="{{ route("admin.roles.index") }}" class="nav-link">
                                         <i class="fa-fw fas fa-briefcase">
 
                                         </i>
@@ -54,8 +53,8 @@
                                 </li>
                             @endcan
                             @can('user_access')
-                                <li class="nav-item">
-                                    <a href="{{ route("admin.users.index") }}" class="nav-link {{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active' : '' }}">
+                                <li class="nav-item {{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active' : '' }}">
+                                    <a href="{{ route("admin.users.index") }}" class="nav-link">
                                         <i class="fa-fw fas fa-user">
 
                                         </i>
@@ -79,6 +78,4 @@
             </li>
         </ul>
     </div>
-    <!-- /.sidebar-menu -->
 </div>
-<!-- /.sidebar -->
