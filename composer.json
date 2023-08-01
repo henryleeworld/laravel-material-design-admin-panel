@@ -19,7 +19,7 @@
         "bugsnag/bugsnag-laravel": "^2.26",
         "fakerphp/faker": "^1.23.0",
         "laravel/pint": "^1.10",
-        "laravel/sail": "^1.22",
+        "laravel/sail": "^1.23",
         "mockery/mockery": "^1.6.2",
         "nunomaduro/collision": "^7.6",
         "phpunit/phpunit": "^10.2",
