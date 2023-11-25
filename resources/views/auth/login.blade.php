@@ -17,7 +17,7 @@
                     <div class="card card-login mb-3">
                         <div class="card-header card-header-primary text-center">
                             <h4 class="card-title">
-                                <strong>登入</strong>
+                                <strong>{{ __('Login') }}</strong>
                             </h4>
                         </div>
                         <div class="card-body login-card-body">
@@ -30,7 +30,7 @@
                             <form action="{{ route('login') }}" method="POST">
                                 {{ csrf_field() }}
 
-                                <div class="form-group">
+                                <div class="mb-3">
                                     <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" required autofocus placeholder="{{ trans('global.login_email') }}" name="email" value="{{ old('email', null) }}">
                                     @if($errors->has('email'))
                                         <div class="invalid-feedback">
@@ -39,7 +39,7 @@
                                     @endif
                                 </div>
 
-                                <div class="form-group">
+                                <div class="mb-3">
                                     <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" required placeholder="{{ trans('global.login_password') }}" name="password">
                                     @if($errors->has('password'))
                                         <div class="invalid-feedback">

@@ -15,7 +15,7 @@
                 {{ csrf_field() }}
                 <div>
                     <input name="token" value="{{ $token }}" type="hidden">
-                    <div class="form-group has-feedback">
+                    <div class="mb-3 has-feedback">
                         <input type="email" name="email" class="form-control" required placeholder="{{ trans('global.login_email') }}">
                         @if($errors->has('email'))
                             <p class="help-block">
@@ -23,7 +23,7 @@
                             </p>
                         @endif
                     </div>
-                    <div class="form-group has-feedback">
+                    <div class="mb-3 has-feedback">
                         <input type="password" name="password" class="form-control" required placeholder="{{ trans('global.login_password') }}">
                         @if($errors->has('password'))
                             <p class="help-block">
@@ -31,7 +31,7 @@
                             </p>
                         @endif
                     </div>
-                    <div class="form-group has-feedback">
+                    <div class="mb-3 has-feedback">
                         <input type="password" name="password_confirmation" class="form-control" required placeholder="{{ trans('global.login_password_confirmation') }}">
                         @if($errors->has('password_confirmation'))
                             <p class="help-block">
