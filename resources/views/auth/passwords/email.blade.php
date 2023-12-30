@@ -25,7 +25,7 @@
                                 {{ csrf_field() }}
                                 <div>
                                     <div class="mb-3 has-feedback">
-                                        <input type="email" name="email" class="form-control" required="autofocus" placeholder="{{ trans('global.login_email') }}">
+                                        <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="{{ trans('global.login_email') }}" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                         @if($errors->has('email'))
                                             <p class="help-block">
                                                 {{ $errors->first('email') }}

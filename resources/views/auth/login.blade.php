@@ -31,7 +31,7 @@
                                 {{ csrf_field() }}
 
                                 <div class="mb-3">
-                                    <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" required autofocus placeholder="{{ trans('global.login_email') }}" name="email" value="{{ old('email', null) }}">
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="{{ trans('global.login_email') }}" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                     @if($errors->has('email'))
                                         <div class="invalid-feedback">
                                             {{ $errors->first('email') }}
@@ -40,7 +40,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" required placeholder="{{ trans('global.login_password') }}" name="password">
+                                    <input type="password" class="form-control @error('password') is-invalid @enderror" placeholder="{{ trans('global.login_password') }}" name="password" required autocomplete="current-password">
                                     @if($errors->has('password'))
                                         <div class="invalid-feedback">
                                             {{ $errors->first('password') }}
@@ -52,7 +52,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="icheck-primary">
-                                            <input type="checkbox" name="remember" id="remember">
+                                            <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                             <label for="remember">{{ trans('global.remember_me') }}</label>
                                         </div>
                                     </div>
