@@ -16,7 +16,7 @@
     },
     "require-dev": {
         "bugsnag/bugsnag-laravel": "^2.26",
-        "fakerphp/faker": "^1.23.0",
+        "fakerphp/faker": "^1.23.1",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6.7",
