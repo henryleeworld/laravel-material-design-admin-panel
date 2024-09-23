@@ -1,4 +1,4 @@
-# Laravel 10 實感設計管理面板
+# Laravel 11 實感設計管理面板
 
 實感設計融合了絕佳的設計手法、常規做法和視覺效果，讓你的應用程式獨具一格，卻又能巧妙地與任何裝置完美搭配。在後臺登入頁面中輸入使用者的電子郵件地址和密碼，必須登入管理員帳戶才能使用管理帳號。
 
@@ -34,8 +34,8 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/jwUfzGi.png)
+![](https://i.imgur.com/rHVcBmI.png)
 > 使用現有的帳號登入
 
-![](https://i.imgur.com/H7fMqTI.png)
+![](https://i.imgur.com/k4jix0O.png)
 > 判斷一個使用者是否可以執行特定行為
