@@ -1,5 +1,5 @@
 {
-    "A fresh verification link has been sent to your email address.": "驗證連結已發送到您的電子郵件地址。",
+    "A fresh verification link has been sent to your email address.": "驗證連結已傳送到您的電子郵件地址。",
     "Administrator": "系統管理員",
     "All rights reserved.": "版權所有。",
     "Before proceeding, please check your email for a verification link.": "在繼續之前，請檢查您的電子郵件中的驗證連結。",
@@ -13,7 +13,7 @@
     "Login": "登入",
     "Name": "姓名",
     "Password": "密碼",
-    "Regards": "致敬",
+    "Regards,": "致敬,",
     "Register": "註冊",
     "Reset Password": "重設密碼",
     "Reset Password Notification": "重設密碼通知",

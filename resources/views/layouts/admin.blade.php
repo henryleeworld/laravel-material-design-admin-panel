@@ -80,7 +80,7 @@
             </section>
             <!-- /.content -->
             <footer class="footer justify-content-center">
-                <strong> &copy;</strong> {{ trans('global.allRightsReserved') }}
+                <strong> &copy;</strong> {{ trans('global.all_rights_reserved') }}
             </footer>
         </div>
         <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">

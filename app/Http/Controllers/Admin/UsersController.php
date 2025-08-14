@@ -14,6 +14,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 class UsersController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
@@ -23,6 +26,9 @@ class UsersController extends Controller
         return view('admin.users.index', compact('users'));
     }
 
+    /**
+     * Show the form for creating a new resource.
+     */
     public function create()
     {
         abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
@@ -32,6 +38,9 @@ class UsersController extends Controller
         return view('admin.users.create', compact('roles'));
     }
 
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(StoreUserRequest $request)
     {
         $user = User::create($request->all());
@@ -41,6 +50,9 @@ class UsersController extends Controller
 
     }
 
+    /**
+     * Show the form for editing the specified resource.
+     */
     public function edit(User $user)
     {
         abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
@@ -52,6 +64,9 @@ class UsersController extends Controller
         return view('admin.users.edit', compact('roles', 'user'));
     }
 
+    /**
+     * Update the specified resource in storage.
+     */
     public function update(UpdateUserRequest $request, User $user)
     {
         $user->update($request->all());
@@ -61,6 +76,9 @@ class UsersController extends Controller
 
     }
 
+    /**
+     * Display the specified resource.
+     */
     public function show(User $user)
     {
         abort_if(Gate::denies('user_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
@@ -70,6 +88,9 @@ class UsersController extends Controller
         return view('admin.users.show', compact('user'));
     }
 
+    /**
+     * Remove the specified resource from storage.
+     */
     public function destroy(User $user)
     {
         abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');

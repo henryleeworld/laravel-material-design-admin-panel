@@ -12,6 +12,11 @@ class Role extends Model
 
     public $table = 'roles';
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var list<string>
+     */
     protected $fillable = [
         'title',
     ];
