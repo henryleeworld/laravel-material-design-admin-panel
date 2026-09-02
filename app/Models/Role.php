@@ -2,24 +2,17 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Attributes\Table;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+#[Fillable(['title'])]
+#[Table('roles')]
 class Role extends Model
 {
     use SoftDeletes;
-
-    public $table = 'roles';
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
-    protected $fillable = [
-        'title',
-    ];
 
     /**
      * Get the attributes that should be cast.
@@ -29,8 +22,6 @@ class Role extends Model
     protected function casts(): array
     {
         return [
-            'created_at' => 'datetime',
-            'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
         ];
     }
